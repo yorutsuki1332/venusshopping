@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans TC", ui-sans-serif, sans-serif;
+  --font-serif: "Noto Serif TC", ui-serif, serif;
+  --color-cream: #f5efea;
+  --color-foam: #faf6f2;
+  --color-sand: #efe6de;
+  --color-line: #eae0d7;
+  --color-ink: #3d3531;
+  --color-bark: #4a423e;
+  --color-mist: #6e625b;
+  --color-sage: #8fa395;
+  --color-sage-deep: #7b9182;
+  --color-blush: #d8c3b8;
+  --color-paper: #fcf9f6;
+  --color-hem: #e6dcd3;
+  --color-shell: #e0d4ca;
+  --color-seam: #ede4dc;
+  --color-biscuit: #f3ece6;
+  --color-wheat: #f3e2c4;
+  --color-mute: #d5cdc6;
+  --color-taupe: #cdbfb4;
+  --color-dust: #a3958c;
+  --color-pebble: #8a7c74;
+  --color-stone: #7d7068;
+  --color-clay: #7a6b63;
+  --color-ash: #786b63;
+  --color-soil: #6d5d54;
+  --color-umber: #63564f;
+  --color-cocoa: #5c4e46;
+  --color-moss: #556b5c;
+  --color-sage-ink: #596e60;
+  --color-bronze: #7a5b32;
+  --color-rose: #c47878;
+  --color-danger: #a15b5b;
+  --radius-photo: 18px;
+  --radius-hero: 28px;
+  --shadow-lift: 0 8px 28px rgba(140, 115, 100, 0.08);
+  --shadow-card: 0 12px 36px rgba(140, 115, 100, 0.12);
+  --text-micro: 10px;
+  --text-micro--line-height: 1.4;
+  --text-caption: 11px;
+  --text-caption--line-height: 1.45;
+  --z-index-70: 70;
+  --spacing-frame: 420px;
+  --spacing-sheet: 90vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #f5efea;
+  color: #4a423e;
+}
+
+.font-serif-tc {
+  font-family: var(--font-serif);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}

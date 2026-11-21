@@ -1,0 +1,14 @@
+node_modules
+.next
+*.tsbuildinfo
+out
+build
+.DS_Store
+*.log
+.env
+.env.local
+data/store.json
+data/*.tmp
+data/*.lock
+public/uploads/*
+!public/uploads/.gitkeep
