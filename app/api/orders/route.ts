@@ -66,6 +66,10 @@ export async function POST(request: Request) {
       note,
       items,
       total: items.reduce((sum, item) => sum + item.unitPrice * item.qty, 0),
+      paymentMethod: "fps",
+      paymentStatus: "unpaid",
+      reportedAt: null,
+      paidAt: null,
       createdAt: new Date().toISOString(),
     };
     db.orders.unshift(order);
@@ -77,6 +81,8 @@ export async function POST(request: Request) {
   }
 
   revalidatePath("/");
+  revalidatePath("/admin");
   revalidatePath("/admin/orders");
+  revalidatePath(`/order/${result.order.id}`);
   return NextResponse.json({ ok: true, id: result.order.id });
 }

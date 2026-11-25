@@ -55,6 +55,8 @@ function seed(): Database {
       campaignEndsAt: ends,
       giftThreshold: 2000,
       giftLabel: "滿 NT$ 2,000 贈首爾品牌帆布袋",
+      fpsId: "",
+      fpsName: "",
     },
     products: [
       published({
@@ -172,11 +174,19 @@ function save(db: Database) {
 export function readDb(): Database {
   ensure();
   const db = JSON.parse(fs.readFileSync(dbFile, "utf8")) as Database;
+  db.settings.fpsId ??= "";
+  db.settings.fpsName ??= "";
   for (const product of db.products) {
     product.description ??= "";
     product.cutoff ??= "";
     product.arrival ??= "";
     product.unit ??= "";
+  }
+  for (const order of db.orders) {
+    order.paymentMethod = "fps";
+    order.paymentStatus ??= "unpaid";
+    order.reportedAt ??= null;
+    order.paidAt ??= null;
   }
   return db;
 }

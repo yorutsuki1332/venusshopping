@@ -58,7 +58,7 @@ export default function HomePage() {
         {[
           ["01 收件", "WhatsApp 的圖片與文字先在伺服器整理成待上架，不會直接出現在前台。"],
           ["02 確認", "店家核對品名、階梯價、規格與實品照，確認無誤才按正式上架。"],
-          ["03 跟團", "你現在看到的都是已上架商品。下單是預訂登記，截團後再通知付款。"],
+          ["03 跟團", "你現在看到的都是已上架商品。下單後只用轉數快付款，店家確認入帳才安排出貨。"],
         ].map(([title, body]) => (
           <div key={title} className="rounded-3xl border border-line bg-paper p-5">
             <h3 className="font-serif-tc text-base font-bold text-ink">{title}</h3>

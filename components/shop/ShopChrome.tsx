@@ -50,7 +50,7 @@ export function ShopChrome({
       </header>
       {children}
       <footer className="border-t border-hem px-5 py-8 text-center text-xs text-pebble">
-        預訂團購・店家確認商品後才正式上架・截團後統一通知付款與出貨
+        預訂團購・店家確認商品後才正式上架・付款只收轉數快 FPS
       </footer>
 
       {drawerOpen ? (

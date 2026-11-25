@@ -36,6 +36,8 @@ export type Product = {
   publishedAt: string | null;
 };
 
+export type PaymentStatus = "unpaid" | "reported" | "paid";
+
 export type OrderItem = {
   productId: string;
   title: string;
@@ -53,6 +55,10 @@ export type Order = {
   note: string;
   items: OrderItem[];
   total: number;
+  paymentMethod: "fps";
+  paymentStatus: PaymentStatus;
+  reportedAt: string | null;
+  paidAt: string | null;
   createdAt: string;
 };
 
@@ -65,6 +71,8 @@ export type ShopSettings = {
   campaignEndsAt: string;
   giftThreshold: number;
   giftLabel: string;
+  fpsId: string;
+  fpsName: string;
 };
 
 export type Database = {

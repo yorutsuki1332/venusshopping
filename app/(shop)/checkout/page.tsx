@@ -46,7 +46,7 @@ export default function CheckoutPage() {
       <form onSubmit={submit} className="space-y-4 rounded-3xl border border-line bg-paper p-6 md:col-span-3">
         <h1 className="font-serif-tc text-2xl font-bold text-ink">跟團登記</h1>
         <p className="text-xs leading-relaxed text-stone">
-          這是預訂，不是立即付款。截團後店家會用你留的電話或 WhatsApp 通知匯款與取貨。
+          付款只收轉數快 FPS。送出後會看到收款識別碼、金額和訂單編號，請用這組資料轉帳。
         </p>
         <label className="block text-sm">
           姓名
@@ -54,7 +54,7 @@ export default function CheckoutPage() {
         </label>
         <label className="block text-sm">
           手機
-          <input value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="09xxxxxxxx" className="mt-1 w-full rounded-2xl border border-hem bg-white px-3 py-2.5" required />
+          <input value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="91234567" className="mt-1 w-full rounded-2xl border border-hem bg-white px-3 py-2.5" required />
         </label>
         <label className="block text-sm">
           WhatsApp / LINE（選填）
@@ -70,7 +70,7 @@ export default function CheckoutPage() {
           disabled={pending || lines.length === 0}
           className="w-full rounded-2xl bg-sage py-3 text-sm font-semibold text-white disabled:bg-mute"
         >
-          {pending ? "送出中…" : "送出預訂"}
+          {pending ? "送出中…" : "送出並查看轉數快"}
         </button>
       </form>
       <aside className="rounded-3xl bg-sand p-5 md:col-span-2">

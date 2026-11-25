@@ -21,7 +21,7 @@ export default function AdminHomePage() {
         {[
           ["待上架", String(pending.length), "/admin/products?status=pending"],
           ["已上架", String(published.length), "/admin/products?status=published"],
-          ["預訂單", String(db.orders.length), "/admin/orders"],
+          ["待入帳", String(db.orders.filter((order) => order.paymentStatus !== "paid").length), "/admin/orders"],
         ].map(([label, value, href]) => (
           <Link key={label} href={href} className="rounded-3xl border border-line bg-paper p-5">
             <p className="text-xs text-pebble">{label}</p>

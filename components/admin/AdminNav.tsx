@@ -7,7 +7,8 @@ const links = [
   { href: "/admin", label: "總覽" },
   { href: "/admin/inbox", label: "WhatsApp 收件" },
   { href: "/admin/products", label: "商品審核" },
-  { href: "/admin/orders", label: "預訂單" },
+  { href: "/admin/orders", label: "跟團訂單" },
+  { href: "/admin/settings", label: "轉數快" },
 ];
 
 export function AdminNav() {
